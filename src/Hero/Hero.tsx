@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Events List", href: "events" },
+  { name: "Event Details", href: "events/:id" },
 ];
 
 export default function Example() {
@@ -95,6 +95,7 @@ export default function Example() {
                     >
                       {item.name}
                     </a>
+                    // <Link  />
                   ))}
                 </div>
                 <div className="py-6">
